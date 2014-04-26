@@ -33,11 +33,12 @@ Function Install-<Title>Deps{
   Param()
     Write-Output 'Install of <Title> Dependencies started...'
   Begin{
-
+    
   }
   
   Process{
     Try{
+      #Invoke all dep scripts
       Get-ChildItem "${PSScriptRoot}\*.dep.ps1" | %{.$_} 
     }
     
